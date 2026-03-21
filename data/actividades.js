@@ -1,24 +1,51 @@
 const actividades = [
   {
     id: "1",
-    titulo: "Actividad 1: Comprensión lectora",
-    descripcion: "Lee el texto y responde las preguntas sobre el tema principal.",
-    icono: "📖",
-    color: "from-blue-500 to-blue-700",
+    titulo: "Misión 1: Palabras Impostoras",
+    descripcion: "Descubre el significado contextualizado de las palabras. Solo uno es el correcto... ¿pero cuál?",
+    imagen: "/images/secuencia1.png",
   },
   {
     id: "2",
-    titulo: "Actividad 2: Producción escrita",
-    descripcion: "Escribe un párrafo descriptivo usando los conectores vistos en clase.",
-    icono: "✍️",
-    color: "from-indigo-500 to-indigo-700",
+    titulo: "Misión 2: El Reto Cronológico",
+    descripcion: "Reconstruye la secuencia de los eventos. El tiempo guarda el secreto del caso.",
+    imagen: "/images/secuencia2.png",
   },
   {
     id: "3",
-    titulo: "Actividad 3: Vocabulario",
-    descripcion: "Aprende nuevas palabras y úsalas en contexto.",
-    icono: "💬",
-    color: "from-sky-500 to-sky-700",
+    titulo: "Misión 3: Exploradores Textuales",
+    descripcion: "Explora los textos y descubre sus estructuras ocultas. El detective siempre lee entre líneas.",
+    imagen: "/images/secuencia3.png",
+  },
+  {
+    id: "4",
+    titulo: "Misión 4: El Manual de las Ideas",
+    descripcion: "Identifica ideas principales y secundarias. Organiza las pistas del caso.",
+    imagen: "/images/secuencia4.png",
+  },
+  {
+    id: "5",
+    titulo: "Misión 5: ¡A Resolver Misterios!",
+    descripcion: "Pon a prueba tu habilidad detectivesca. El enigma te espera.",
+    imagen: "/images/secuencia5.png",
+  },
+  {
+    id: "6",
+    titulo: "Misión 6: Código: Reconstrucción",
+    descripcion: "Descifra el código y reconstruye el texto. Solo los mejores detectives lo lograrán.",
+    imagen: "/images/secuencia6.png",
+  },
+  {
+    id: "7",
+    titulo: "Misión 7: El Juicio del Detective",
+    descripcion: "La misión final. Demuestra todo lo que sabes y llega al veredicto.",
+    imagen: "/images/secuencia7.png",
+  },
+  {
+    id: "8",
+    titulo: "Misión 8: ¡La Recompensa!",
+    descripcion: "¡Lo lograste! Has completado todas las misiones. Este es tu momento de gloria, detective.",
+    imagen: "/images/secuencia8.png",
   },
 ];
 
