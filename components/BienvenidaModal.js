@@ -35,7 +35,7 @@ export default function BienvenidaModal({ onComplete }) {
           {/* Header */}
           <div className="text-center mb-6">
             <p className="text-amber-800 text-xs tracking-[0.3em] uppercase mb-1" style={{fontFamily:"Georgia, serif"}}>— Expediente Confidencial —</p>
-            <h2 className="text-3xl font-black text-stone-800 mb-2" style={{fontFamily:"'Playfair Display', Georgia, serif"}}>Identificacion del Detective</h2>
+            <h2 className="text-3xl font-black text-stone-800 mb-2" style={{fontFamily:"'Playfair Display', Georgia, serif"}}>Identificación del Detective</h2>
             <div style={{background:"linear-gradient(90deg, transparent, #b8860b, transparent)", height:"1px"}} className="w-full mt-2" />
           </div>
 
@@ -62,10 +62,10 @@ export default function BienvenidaModal({ onComplete }) {
             </label>
             <div className="grid grid-cols-4 gap-3">
               {avatares.map((av) => (
-                <button key={av.id} onClick={() => { setAvatarSeleccionado(av.id); setError(""); }} className={`flex flex-col items-center gap-1 p-2 rounded-xl transition-all ${avatarSeleccionado === av.id ? "ring-2 ring-amber-600 scale-105" : "hover:scale-102 opacity-70 hover:opacity-100"}`} style={{background: avatarSeleccionado === av.id ? "rgba(184,134,11,0.15)" : "rgba(255,255,255,0.3)"}}>
-                  <div className="w-16 h-16">{av.svg}</div>
+                <button key={av.id} onClick={() => { setAvatarSeleccionado(av.id); setError(""); }} className={`flex flex-col items-center gap-1 p-2 rounded-xl transition-all ${avatarSeleccionado === av.id ? "ring-2 ring-amber-600 scale-105" : "opacity-70 hover:opacity-100"}`} style={{background: avatarSeleccionado === av.id ? "rgba(184,134,11,0.15)" : "rgba(255,255,255,0.3)"}}>
+                  <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-amber-600/40"><img src={av.imagen} alt={av.nombre} className="w-full h-full object-cover" /></div>
                   <span className="text-stone-700 text-xs font-semibold text-center leading-tight" style={{fontFamily:"Georgia, serif"}}>{av.nombre}</span>
-                  <span className="text-stone-500 text-xs text-center leading-tight hidden sm:block">{av.descripcion}</span>
+                  <span className="text-stone-500 text-xs text-center leading-tight">{av.descripcion}</span>
                 </button>
               ))}
             </div>

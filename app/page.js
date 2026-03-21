@@ -18,6 +18,7 @@ const enlaces = [
 export default function Home() {
   const [detective, setDetective] = useState(null);
   const [cargando, setCargando] = useState(true);
+  const [menuAbierto, setMenuAbierto] = useState(false);
 
   useEffect(() => {
     const nombre = localStorage.getItem("detective_nombre");
@@ -44,26 +45,29 @@ export default function Home() {
       {detective && <AsistenteDetective nombre={detective.nombre} avatarId={detective.avatar} onReset={handleReset} />}
 
       {/* NAVBAR */}
+      {/* NAVBAR */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-amber-900/30 px-6 py-3 flex justify-between items-center">
-        <span className="font-display text-amber-700 font-bold text-base tracking-wide">Mónica Bolívar</span>
-        <div className="relative group">
-          <button className="text-stone-300 text-sm px-4 py-2 rounded border border-amber-900/40 hover:bg-amber-900/20 hover:text-amber-300 transition flex items-center gap-2 font-display">
-            🔍 Misiones <span className="text-xs opacity-60">▼</span>
+        <span className="font-display text-amber-400 font-bold text-base tracking-wide">Mónica Bolívar</span>
+        <div className="relative">
+          <button onClick={() => setMenuAbierto(!menuAbierto)} className="text-stone-300 text-sm px-4 py-2 rounded border border-amber-900/40 hover:bg-amber-900/20 hover:text-amber-300 transition flex items-center gap-2 font-display">
+            🔍 Misiones <span className="text-xs opacity-60">{menuAbierto ? "▲" : "▼"}</span>
           </button>
-          <div className="absolute right-0 top-full mt-2 w-64 bg-[#1a1714] border border-amber-900/40 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
-            {[
-              { id: "1", nombre: "Palabras Impostoras" },
-              { id: "2", nombre: "El Reto Cronológico" },
-              { id: "3", nombre: "Exploradores Textuales" },
-              { id: "4", nombre: "El Manual de las Ideas" },
-              { id: "5", nombre: "¡A Resolver Misterios!" },
-              { id: "6", nombre: "Código: Reconstrucción" },
-              { id: "7", nombre: "El Juicio del Detective" },
-              { id: "8", nombre: "¡La Recompensa!" },
-            ].map((m) => (
-              <a key={m.id} href={"/actividades/" + m.id} className="flex items-center gap-3 px-4 py-3 text-stone-600 hover:text-amber-300 hover:bg-amber-900/20 transition text-sm border-b border-stone-800/50 last:border-0"><span className="text-amber-500 font-bold font-display text-xs w-5">{m.id}</span>{m.nombre}</a>
-            ))}
-          </div>
+          {menuAbierto && (
+            <div className="absolute right-0 top-full mt-2 w-64 bg-[#1a1714] border border-amber-900/40 rounded-xl shadow-2xl overflow-hidden">
+              {[
+                { id: "1", nombre: "Palabras Impostoras" },
+                { id: "2", nombre: "El Reto Cronológico" },
+                { id: "3", nombre: "Exploradores Textuales" },
+                { id: "4", nombre: "El Manual de las Ideas" },
+                { id: "5", nombre: "¡A Resolver Misterios!" },
+                { id: "6", nombre: "Código: Reconstrucción" },
+                { id: "7", nombre: "El Juicio del Detective" },
+                { id: "8", nombre: "¡La Recompensa!" },
+              ].map((m) => (
+                <a key={m.id} href={"/actividades/" + m.id} onClick={() => setMenuAbierto(false)} className="flex items-center gap-3 px-4 py-3 text-stone-400 hover:text-amber-300 hover:bg-amber-900/20 transition text-sm border-b border-stone-800/50 last:border-0"><span className="text-amber-500 font-bold font-display text-xs w-5">{m.id}</span>{m.nombre}</a>
+              ))}
+            </div>
+          )}
         </div>
       </nav>
 
@@ -146,17 +150,17 @@ export default function Home() {
       {/* ENLACES DE INTERES */}
       <section className="bg-white py-24 px-6">
         <div className="max-w-5xl mx-auto">
-          <p className="uppercase tracking-[0.3em] text-amber-600 text-xs text-center mb-3 font-display">— Herramientas del detective —</p>
+          <p className="uppercase tracking-[0.3em] text-blue-600 text-xs text-center mb-3 font-display">— Herramientas del detective —</p>
           <h2 className="font-display text-4xl font-black text-stone-800 text-center mb-3">Contenido de Interés</h2>
           <div className="gold-line w-24 mx-auto mb-4" />
-          <p className="text-stone-500 text-center mb-14 text-lg italic">Recursos y plataformas que usamos en clase</p>
+          <p className="text-slate-600 text-center mb-14 text-lg italic">Recursos y plataformas que usamos en clase</p>
           <div className="grid md:grid-cols-3 gap-5">
             {enlaces.map((e) => (
-              <a key={e.nombre} href={e.url} target="_blank" rel="noopener noreferrer" className="group bg-stone-50 border border-stone-200 hover:border-amber-400 rounded-xl p-6 transition hover:shadow-xl hover:shadow-amber-100">
+              <a key={e.nombre} href={e.url} target="_blank" rel="noopener noreferrer" className="group bg-blue-50 border-2 border-blue-200 hover:border-blue-400 hover:bg-blue-100 rounded-xl p-6 transition hover:shadow-xl hover:shadow-blue-200">
                 <div className="text-4xl mb-3">{e.icono}</div>
-                <h3 className="font-display text-amber-700 font-bold text-lg mb-1 group-hover:text-amber-600 transition">{e.nombre}</h3>
-                <p className="text-stone-500 text-sm leading-relaxed">{e.descripcion}</p>
-                <span className="inline-block mt-4 text-xs text-amber-600 group-hover:text-amber-500 transition font-semibold">Visitar sitio →</span>
+                <h3 className="font-display text-blue-700 font-bold text-lg mb-1 group-hover:text-blue-600 transition">{e.nombre}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed">{e.descripcion}</p>
+                <span className="inline-block mt-4 text-xs text-blue-600 group-hover:text-amber-500 transition font-semibold">Visitar sitio →</span>
               </a>
             ))}
           </div>
