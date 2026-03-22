@@ -23,6 +23,18 @@ export const avatares = [
     descripcion: "El sabueso literario",
     imagen: "/images/avatarhombrenegro.png",
   },
+  {
+    id: "mujerlatina",
+    nombre: "Agente Paola",
+    descripcion: "Analista de pistas",
+    imagen: "/images/avatarmujermexicana.png",
+  },
+  {
+    id: "hombreafro",
+    nombre: "Agente Smith",
+    descripcion: "Maestro del lenguaje",
+    imagen: "/images/avatarhombrepielnegro.png",
+  },
 ];
 
 export const tips = [

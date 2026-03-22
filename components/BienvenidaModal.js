@@ -60,7 +60,7 @@ export default function BienvenidaModal({ onComplete }) {
             <label className="block text-stone-700 text-sm font-semibold mb-3 tracking-wide" style={{fontFamily:"Georgia, serif"}}>
               🕵️ Elige tu identidad
             </label>
-            <div className="grid grid-cols-4 gap-3">
+            <div className="grid grid-cols-3 gap-3">
               {avatares.map((av) => (
                 <button key={av.id} onClick={() => { setAvatarSeleccionado(av.id); setError(""); }} className={`flex flex-col items-center gap-1 p-2 rounded-xl transition-all ${avatarSeleccionado === av.id ? "ring-2 ring-amber-600 scale-105" : "opacity-70 hover:opacity-100"}`} style={{background: avatarSeleccionado === av.id ? "rgba(184,134,11,0.15)" : "rgba(255,255,255,0.3)"}}>
                   <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-amber-600/40"><img src={av.imagen} alt={av.nombre} className="w-full h-full object-cover" /></div>

@@ -58,9 +58,9 @@ export default function Home() {
                 { id: "1", nombre: "Palabras Impostoras" },
                 { id: "2", nombre: "El Reto Cronológico" },
                 { id: "3", nombre: "Exploradores Textuales" },
-                { id: "4", nombre: "El Manual de las Ideas" },
+                { id: "4", nombre: "Tras la Evidencia Clave" },
                 { id: "5", nombre: "¡A Resolver Misterios!" },
-                { id: "6", nombre: "Código: Reconstrucción" },
+                { id: "6", nombre: "Código Reconstrucción" },
                 { id: "7", nombre: "El Juicio del Detective" },
                 { id: "8", nombre: "¡La Recompensa!" },
               ].map((m) => (
