@@ -19,7 +19,7 @@ const actividades = [
   },
   {
     id: "4",
-    titulo: "Misión 4: El Manual de las Ideas",
+    titulo: "Misión 4: Tras la Evidencia Clave",
     descripcion: "Identifica ideas principales y secundarias. Organiza las pistas del caso.",
     imagen: "/images/secuencia4.png",
   },
@@ -31,7 +31,7 @@ const actividades = [
   },
   {
     id: "6",
-    titulo: "Misión 6: Código: Reconstrucción",
+    titulo: "Misión 6: Código Reconstrucción",
     descripcion: "Descifra el código y reconstruye el texto. Solo los mejores detectives lo lograrán.",
     imagen: "/images/secuencia6.png",
   },

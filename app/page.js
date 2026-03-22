@@ -94,7 +94,7 @@ export default function Home() {
             misiones, recursos y materiales para aprender juntos.
           </p>
           <a href="#misiones" className="inline-block bg-amber-700 hover:bg-amber-600 text-stone-800 font-display font-bold px-10 py-4 rounded border border-amber-500/30 hover:border-amber-400/60 transition shadow-lg shadow-amber-900/30">
-            Iniciar investigación
+            INICIAR INVESTIGACIÓN
           </a>
         </div>
       </section>
@@ -112,11 +112,11 @@ export default function Home() {
               </div>
               <div className="absolute -bottom-1 -right-1 w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center text-sm shadow-lg">🔍</div>
             </div>
-            <p className="uppercase tracking-widest text-amber-600/70 text-xs mb-3 font-display">La detective del lenguaje</p>
+            <p className="uppercase tracking-widest text-amber-600/70 text-xs mb-3 font-display">Profesora i.e. general santander</p>
             <h2 className="font-display text-3xl font-bold text-stone-800 mb-4">¡Hola, detectives!</h2>
             <div className="gold-line w-16 mb-4" />
             <p className="text-stone-600 text-lg leading-relaxed mb-4">
-              Soy <strong className="text-amber-700">Mónica María Bolívar</strong>, docente de Lenguaje.
+              Soy <strong className="text-amber-700">Mónica María Bolívar</strong>, docente de lenguaje.
               En este espacio encontrarás 7 misiones que pondrán a prueba tus habilidades como lector crítico.
             </p>
             <p className="text-stone-500 text-base leading-relaxed" style={{ fontStyle: "italic" }}>
