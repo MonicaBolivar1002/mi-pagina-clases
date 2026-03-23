@@ -175,24 +175,25 @@ export default function Home() {
       {/* SEPARADOR */}
       <div className="gold-line max-w-4xl mx-auto opacity-40" />
 
-      {/* VIDEO DE INTERES */}
+      {/* VIDEOS DE INTERES */}
       <section className="bg-white py-24 px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <p className="uppercase tracking-[0.3em] text-blue-600 text-xs text-center mb-3 font-display">— Material de apoyo —</p>
-          <h2 className="font-display text-4xl font-black text-stone-800 text-center mb-3">Video de Interés</h2>
+          <h2 className="font-display text-4xl font-black text-stone-800 text-center mb-3">Videos de Interés</h2>
           <div className="gold-line w-24 mx-auto mb-4" />
-          <p className="text-slate-500 text-center mb-10 text-lg italic">Un recurso adicional para reforzar lo aprendido</p>
-
-          <div className="rounded-2xl overflow-hidden shadow-2xl border-2 border-blue-100 aspect-video">
-            <video className="w-full h-full" controls playsInline>
-              <source src="/videos/videoICFES.mp4" type="video/mp4" />
-              Tu navegador no soporta la reproducción de video.
-            </video>
+          <p className="text-slate-500 text-center mb-10 text-lg italic">Recursos audiovisuales para reforzar lo aprendido</p>
+          <div className="grid md:grid-cols-3 gap-5">
+            {[
+              { titulo: "Lectura crítica ICFES", descripcion: "Conoce las competencias que evalúa el ICFES en las pruebas SABER 11", url: "https://www.youtube.com/watch?v=YGciKOjXdYM", icono: "🎬" },
+            ].map((v) => (
+              <a key={v.titulo} href={v.url} target="_blank" rel="noopener noreferrer" className="group bg-blue-50 border-2 border-blue-200 hover:border-blue-400 hover:bg-blue-100 rounded-xl p-6 transition hover:shadow-xl hover:shadow-blue-200">
+                <div className="text-4xl mb-3">{v.icono}</div>
+                <h3 className="font-display text-blue-700 font-bold text-lg mb-1 group-hover:text-blue-600 transition">{v.titulo}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed mb-4">{v.descripcion}</p>
+                <span className="inline-block text-xs text-blue-600 group-hover:text-blue-500 transition font-semibold">Ver en YouTube →</span>
+              </a>
+            ))}
           </div>
-
-          <p className="text-slate-500 text-sm text-center mt-4 italic">
-            Competencias en lectura crítica
-          </p>
         </div>
       </section>
 
