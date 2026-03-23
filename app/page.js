@@ -62,7 +62,7 @@ export default function Home() {
                 { id: "5", nombre: "¡A Resolver Misterios!" },
                 { id: "6", nombre: "Código Reconstrucción" },
                 { id: "7", nombre: "El Juicio del Detective" },
-                { id: "8", nombre: "¡La Recompensa!" },
+                { id: "🏆", nombre: "¡La Recompensa!" },
               ].map((m) => (
                 <a key={m.id} href={"/actividades/" + m.id} onClick={() => setMenuAbierto(false)} className="flex items-center gap-3 px-4 py-3 text-stone-400 hover:text-amber-300 hover:bg-amber-900/20 transition text-sm border-b border-stone-800/50 last:border-0"><span className="text-amber-500 font-bold font-display text-xs w-5">{m.id}</span>{m.nombre}</a>
               ))}
@@ -82,15 +82,12 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-3xl mx-auto">
-          <p className="uppercase tracking-[0.3em] text-amber-500/80 text-xs mb-4 font-display">
-            — Docente de Lenguaje —
-          </p>
           <h1 className="font-display text-6xl font-black mb-6 leading-tight text-stone-100">
-            Mónica María<br />Bolívar
+            MISIÓN: LECTURA CRÍTICA
           </h1>
           <div className="gold-line w-32 mx-auto mb-6" />
           <p className="text-lg text-stone-300 mb-10 max-w-xl mx-auto leading-relaxed" style={{ fontStyle: "italic" }}>
-            Bienvenidos a mi espacio educativo digital. Aquí encontrarás
+            Bienvenidos a este Ambiente Virtual de Aprendizaje (AVA). Aquí encontrarás
             misiones, recursos y materiales para aprender juntos.
           </p>
           <a href="#misiones" className="inline-block bg-amber-700 hover:bg-amber-600 text-stone-800 font-display font-bold px-10 py-4 rounded border border-amber-500/30 hover:border-amber-400/60 transition shadow-lg shadow-amber-900/30">
@@ -172,6 +169,30 @@ export default function Home() {
               </a>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* SEPARADOR */}
+      <div className="gold-line max-w-4xl mx-auto opacity-40" />
+
+      {/* VIDEO DE INTERES */}
+      <section className="bg-white py-24 px-6">
+        <div className="max-w-4xl mx-auto">
+          <p className="uppercase tracking-[0.3em] text-blue-600 text-xs text-center mb-3 font-display">— Material de apoyo —</p>
+          <h2 className="font-display text-4xl font-black text-stone-800 text-center mb-3">Video de Interés</h2>
+          <div className="gold-line w-24 mx-auto mb-4" />
+          <p className="text-slate-500 text-center mb-10 text-lg italic">Un recurso adicional para reforzar lo aprendido</p>
+
+          <div className="rounded-2xl overflow-hidden shadow-2xl border-2 border-blue-100 aspect-video">
+            <video className="w-full h-full" controls playsInline>
+              <source src="/videos/videoICFES.mp4" type="video/mp4" />
+              Tu navegador no soporta la reproducción de video.
+            </video>
+          </div>
+
+          <p className="text-slate-500 text-sm text-center mt-4 italic">
+            Competencias en lectura crítica
+          </p>
         </div>
       </section>
 

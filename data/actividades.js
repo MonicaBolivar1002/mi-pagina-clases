@@ -43,7 +43,7 @@ const actividades = [
   },
   {
     id: "8",
-    titulo: "Misión 8: ¡La Recompensa!",
+    titulo: "🏆 ¡La Recompensa!  🏆",
     descripcion: "¡Lo lograste! Has completado todas las misiones. Este es tu momento de gloria, detective.",
     imagen: "/images/secuencia8.png",
   },
