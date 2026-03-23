@@ -64,7 +64,7 @@ export default function BienvenidaModal({ onComplete }) {
               {avatares.map((av) => (
                 <button key={av.id} onClick={() => { setAvatarSeleccionado(av.id); setError(""); }} className={`flex flex-col items-center gap-1 p-2 rounded-xl transition-all ${avatarSeleccionado === av.id ? "ring-2 ring-amber-600 scale-105" : "opacity-70 hover:opacity-100"}`} style={{background: avatarSeleccionado === av.id ? "rgba(184,134,11,0.15)" : "rgba(255,255,255,0.3)"}}>
                   <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-amber-600/40"><img src={av.imagen} alt={av.nombre} className="w-full h-full object-cover" /></div>
-                  <span className="text-stone-700 text-xs font-semibold text-center leading-tight" style={{fontFamily:"Georgia, serif"}}>{av.nombre}</span>
+                  {/*<span className="text-stone-700 text-xs font-semibold text-center leading-tight" style={{fontFamily:"Georgia, serif"}}>{av.nombre}</span>*/}
                   <span className="text-stone-500 text-xs text-center leading-tight">{av.descripcion}</span>
                 </button>
               ))}

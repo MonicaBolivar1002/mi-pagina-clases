@@ -103,7 +103,15 @@ export default function Home() {
       <section className="bg-white px-6 py-24">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="rounded-xl overflow-hidden shadow-2xl shadow-black/50 aspect-video bg-black border border-amber-900/20">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TU_VIDEO_ID" title="Saludo de bienvenida" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full" />
+            <video
+              className="w-full h-full object-cover"
+              controls
+              playsInline
+              poster="/images/avatar.png"
+            >
+              <source src="/videos/avatarvideo.mp4" type="video/mp4" />
+              Tu navegador no soporta la reproducción de video.
+            </video>
           </div>
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="mb-6 relative">
