@@ -55,7 +55,7 @@ export default function Home() {
           {menuAbierto && (
             <div className="absolute right-0 top-full mt-2 w-64 bg-[#1a1714] border border-amber-900/40 rounded-xl shadow-2xl overflow-hidden">
               {[
-                { id: "1", nombre: "Palabras Impostoras" },
+                { id: "1", nombre: "Tras el Rastro del Significado" },
                 { id: "2", nombre: "El Reto Cronológico" },
                 { id: "3", nombre: "Exploradores Textuales" },
                 { id: "4", nombre: "Tras la Evidencia Clave" },

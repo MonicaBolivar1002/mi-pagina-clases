@@ -1,7 +1,7 @@
 const actividades = [
   {
     id: "1",
-    titulo: "Misión 1: Palabras Impostoras",
+    titulo: "Misión 1: Tras el Rastro del Significado",
     descripcion: "Descubre el significado contextualizado de las palabras. Solo uno es el correcto... ¿pero cuál?",
     imagen: "/images/secuencia1.png",
   },
